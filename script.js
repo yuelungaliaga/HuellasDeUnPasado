@@ -20,7 +20,7 @@ document.querySelectorAll('.tabs').forEach(t=>{
 
 // Visor ampliado
 const v=document.querySelector('.visor'),vi=v.querySelector('img'),vp=v.querySelector('p');
-document.querySelectorAll('.foto').forEach(fo=>fo.addEventListener('click',()=>{
+document.querySelectorAll('.foto,.fig').forEach(fo=>fo.addEventListener('click',()=>{
   if(fo.classList.contains('sensible')){fo.classList.remove('sensible');return}
   if(fo.classList.contains('sin-img')||fo.classList.contains('c'))return;
   vi.src=fo.querySelector('img').src;vp.textContent=fo.querySelector('figcaption').textContent;v.hidden=false;

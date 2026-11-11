@@ -136,3 +136,47 @@ blockquote{font-family:var(--display);font-style:italic;font-size:1.3rem;line-he
 .cuerpo blockquote{column-span:all;text-align:center;font-size:clamp(1.5rem,3vw,2.1rem);max-width:30ch;margin:1.8rem auto;padding:1rem 0;border-top:2px solid var(--rojo);border-bottom:1px solid var(--tinta)}
 .fin{text-align:center;color:var(--rojo);margin-top:1.5rem}
 .nota h3 a{text-decoration:none}.nota h3 a:hover{color:var(--rojo)}
+
+/* Portada de Opinión */
+.op-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem 2.5rem}
+.nota.op{border-top:1px solid var(--tinta);padding-top:1.2rem}
+.tarjeta-img{display:block;aspect-ratio:3/2;overflow:hidden;background:#d9d7d1}
+.tarjeta-img img{width:100%;height:100%;object-fit:cover;object-position:center 25%;filter:grayscale(1) contrast(1.05);transition:filter .5s,transform .6s}
+.tarjeta-img:hover img{filter:none;transform:scale(1.03)}
+.nota.op h3{font-size:1.7rem}
+.nota h3 a{text-decoration:none}.nota h3 a:hover{color:var(--rojo)}
+.leer{font-weight:600;color:var(--rojo)}
+
+/* Subpáginas de artículos */
+.cabecera.compacta .titulo{font-size:clamp(2rem,6vw,4rem);padding-top:.8rem}
+.titulo a{text-decoration:none}
+.cabecera.compacta .lema{display:none}
+.subtitulo{font-style:italic;font-size:1.25rem;color:var(--gris);max-width:55ch;margin:0 auto 1.2rem}
+.volver{text-align:center;margin-top:2.5rem;font-weight:600}
+.cierre-art{max-width:34ch;margin:2.5rem auto;text-align:center;font-size:clamp(1.4rem,3vw,2rem);border-top:2px solid var(--rojo);border-bottom:1px solid var(--tinta);padding:1.2rem 0}
+
+/* Figuras de artículo */
+.fig{margin:1.8rem auto;max-width:860px;column-span:all;break-inside:avoid;cursor:zoom-in}
+.fig.v{max-width:360px}
+.fig .marco{position:relative;overflow:hidden;background:#d9d7d1}
+.fig img{width:100%;height:auto;display:block;filter:grayscale(1) contrast(1.05);transition:filter .5s,transform .6s}
+.fig:hover img{filter:none}
+.fig figcaption{font-size:.85rem;font-style:italic;color:var(--gris);line-height:1.4;margin-top:.5rem;text-align:left;hyphens:none}
+.fig.sensible{cursor:pointer}
+.fig.sensible img,.fig.sensible:hover img{filter:grayscale(1) blur(22px);transform:scale(1.1)}
+.fig.sensible .marco::after{content:"Imagen sensible\A Haz clic para verla";white-space:pre;position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;font-style:italic;background:rgba(0,0,0,.5)}
+.par{column-span:all;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.8rem 0}
+.par .fig{margin:0;max-width:none}
+.cuerpo .fig{margin-top:1.5rem}
+
+/* Serie fotográfica y fichas */
+.serie-tit{margin-top:3.5rem}
+.serie{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2.5rem 2rem;align-items:start}
+.item-serie .fig{margin:0 0 .6rem;max-width:none}
+.item-serie details{border-top:1px solid var(--tinta);font-size:.9rem}
+.item-serie summary{cursor:pointer;font-weight:600;padding:.5rem 0;color:var(--rojo)}
+.item-serie table{border-collapse:collapse;width:100%;margin-bottom:.5rem}
+.item-serie th,.item-serie td{text-align:left;vertical-align:top;padding:.35rem .5rem .35rem 0;border-bottom:1px solid var(--regla);line-height:1.4}
+.item-serie th{width:34%;font-weight:600}
+
+@media (max-width:860px){.op-grid{grid-template-columns:1fr}.par{grid-template-columns:1fr}}
